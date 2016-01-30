@@ -6,52 +6,59 @@ body {
   background-color: #fff;
   margin-top: 110px;
   padding-left: 100px;
+  padding-right: 80px;
   min-width: 1200px;
   height: 500px;
   position: relative;
   z-index: 1;
 }
 
-.ryu-player-1 {
+.ryu {
   float: left;
+  width: 659px;
+  height: 494px;
+  border: 1px solid black; /* remove-for debugging */
 }
 
-.ryu-player-1, .ryu-player-2 {
+.ken {
+  float: right;
+  width: 559px;
+  height: 494px;
+  margin-top: 50px;
+  border: 1px solid red; /* remove-for debugging */
+}
+
+.ryu-ready, .ryu-still, .ryu-throwing {
   width: 659px;
   height: 494px;
 }
 
-.ryu-player-1-ready, .ryu-player-1-still, .ryu-player-1-throwing,
-.ryu-player-2-ready, .ryu-player-2-still, .ryu-player-2-throwing {
-  width: 659px;
+.ken-ready, .ken-still, .ken-throwing {
+  width: 559px;
   height: 494px;
+  background: no-repeat;
+  zoom: 85%; /* reduces img size */
 }
 
-.ryu-player-1-ready, .ryu-player-1-throwing,
-.ryu-player-2-ready, .ryu-player-2-throwing {
+.ryu-ready, .ryu-throwing,
+.ken-ready, .ken-throwing {
   display: none;
 }
 
-.ryu-player-1-ready {
+.ryu-ready {
   background-image: url('../images/ryu-ready-position.gif');
 }
 
-.ryu-player-1-still {
+.ryu-still {
   background-image: url('../images/ryu-standing-still.png');
 }
 
-.ryu-player-1-throwing {
+.ryu-throwing {
   background-image: url('../images/throwing-hadouken.png');
 }
 
-
-
-.ryu-player-2 {
-  position: right;
-}
-
-.ryu-player-2-ready {
-  background-image: url('../images/ryu-ready-position.gif');
+.ken-ready {
+  background-image: url('../images/ken-ready-position.gif');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -60,8 +67,8 @@ body {
   -ms-filter: "FlipH";
 }
 
-.ryu-player-2-still {
-  background-image: url('../images/ryu-standing-still.png');
+.ken-still {
+  background-image: url('../images/ken-standing-still.png');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -70,8 +77,8 @@ body {
   -ms-filter: "FlipH";
 }
 
-.ryu-player-2-throwing {
-  background-image: url('../images/throwing-hadouken.png');
+.ken-throwing {
+  background-image: url('../images/ken-throwing.jpeg');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
