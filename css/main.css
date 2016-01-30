@@ -28,21 +28,84 @@ body {
   border: 1px solid red; /* remove-for debugging */
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-still {
   width: 659px;
   height: 494px;
+  display: block;
 }
 
-.ken-ready, .ken-still, .ken-throwing {
+.ryu-ready {
+  width: 659px;
+  height: 494px;
+  display: none;
+}
+
+.ryu-throwing {
+  width: 659px;
+  height: 494px;
+  display: none;
+}
+
+.ken-still {
   width: 559px;
   height: 494px;
   background: no-repeat;
   zoom: 85%; /* reduces img size */
+  display: block;
 }
 
-.ryu-ready, .ryu-throwing,
-.ken-ready, .ken-throwing {
+.ken-ready {
+  width: 559px;
+  height: 494px;
+  background: no-repeat;
+  zoom: 85%; /* reduces img size */
   display: none;
+}
+
+.ken-throwing {
+  width: 659px;
+  height: 594px;
+  background: no-repeat;
+  zoom: 95%; /* reduces img size */
+  display: none;
+  margin-top: -75px;
+}
+
+.ryu-hadouken, .ken-hadouken,
+.ryu-ready, .ryu-still, .ryu-throwing {
+  background-repeat: no-repeat;
+}
+
+.ryu-hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px;
+  height: 90px;
+  display: none;
+  float: left;
+  position: absolute;
+  z-index: 10;
+  top: 170px;
+  left: 650px;
+  border: 1px solid black; /* remove-for debugging */
+}
+
+.ken-hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px;
+  height: 90px;
+  display: none;
+  float: right;
+  position: absolute;
+  z-index: 10;
+  top: 170px;
+  right: 520px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  border: 1px solid red; /* remove-for debugging */
 }
 
 .ryu-ready {
@@ -54,7 +117,7 @@ body {
 }
 
 .ryu-throwing {
-  background-image: url('../images/throwing-hadouken.png');
+  background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
 .ken-ready {
@@ -78,7 +141,7 @@ body {
 }
 
 .ken-throwing {
-  background-image: url('../images/ken-throwing.jpeg');
+  background-image: url('../images/ken-throwing.png');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
