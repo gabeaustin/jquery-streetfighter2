@@ -86,7 +86,6 @@ body {
   z-index: 10;
   top: 170px;
   left: 650px;
-  border: 1px solid black; /* remove-for debugging */
 }
 
 .ken-hadouken {
@@ -105,7 +104,6 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-  border: 1px solid red; /* remove-for debugging */
 }
 
 .ryu-ready {

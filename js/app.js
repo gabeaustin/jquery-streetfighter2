@@ -12,15 +12,28 @@ $(document).ready(function() {
   })
   .mousedown(function() {
     // events when pressing the mouse - Ryu
-    $('.ryu-throwing').show();
+    playHadouken();
     $('.ryu-ready').hide();
-    $('.ryu-hadouken').show();
+    $('.ryu-throwing').show();
+    // below is callback function - same with 2 above
+    $('.ryu-hadouken').finish().show().animate(
+      {'left': '940px'},
+      500, // milliseconds for animate to take
+      // below anonymous function
+      function() {
+        $(this).hide();
+        // this - refers to ryu-hadouken
+        $(this).css('left', '650px');
+        }
+      );
   })
   .mouseup(function() {
     // events when release mouse - Ryu
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
   });
+
+
 
   // jQuery events for Ken
   $('.ken').mouseenter(function() {
@@ -34,16 +47,36 @@ $(document).ready(function() {
     $('.ken-ready').hide();
   })
   .mousedown(function() {
-    // events when pressing the mouse - Ryu
-    $('.ken-throwing').show();
+    // events when pressing the mouse - Ken
+    playShoryuken();
     $('.ken-ready').hide();
-    $('.ken-hadouken').show();
+    $('.ken-throwing').show();
+    $('.ken-hadouken').finish().show().animate(
+      {'right': '860px'},
+      500,
+      function() {
+        $(this).hide();
+        $(this).css('right', '520px');
+        }
+      );
   })
   .mouseup(function() {
-    // events when release mouse - Ryu
+    // events when release mouse - Ken
     $('.ken-throwing').hide();
     $('.ken-ready').show();
-  })
+  });
+
+  function playHadouken () {
+    $('#hadouken-sound')[0].volume = 0.5;
+    $('#hadouken-sound')[0].load();
+    $('#hadouken-sound')[0].play();
+  };
+
+  function playShoryuken () {
+    $('#shoryuken-sound')[0].volume = 0.5;
+    $('#shoryuken-sound')[0].load();
+    $('#shoryuken-sound')[0].play();
+  };
 });
 
 
