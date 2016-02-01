@@ -13,16 +13,29 @@ body {
   z-index: 1;
 }
 
+.logo {
+  height: 150px;
+  width: 280px;
+  background: no-repeat;
+  margin: 0 auto;
+  margin-bottom: -110px;
+}
+
 .instructions {
   color: #fff;
   top: -30px;
   padding: 15px;
   position: relative;
   z-index: -1;
-  border: 1px red solid;
+  text-align: center;
 }
 
 .instructions h2 {
+  color: #fff;
+  top: 10px;
+  padding: 15px;
+  position: relative;
+  z-index: -1;
   text-align: center;
 }
 
@@ -30,7 +43,6 @@ body {
   float: left;
   width: 659px;
   height: 494px;
-  border: 1px solid black; /* remove-for debugging */
 }
 
 .ken {
@@ -38,7 +50,6 @@ body {
   width: 559px;
   height: 494px;
   margin-top: 50px;
-  border: 1px solid red; /* remove-for debugging */
 }
 
 .ryu-still {
@@ -131,6 +142,10 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+.logo {
+  background-image: url('../images/logo.png');
 }
 
 .ryu-ready {
