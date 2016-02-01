@@ -32,7 +32,16 @@ $(document).ready(function() {
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
   });
-
+  $(document).keydown(function(event) {
+    if(event.keyCode == 88) {
+      $('.ryu-ready').hide();
+      $('.ryu-cool').show();
+    }
+  });
+  $(document).keyup(function(){
+    $('.ryu-cool').hide();
+    $('.ryu-ready').show();
+  });
 
 
   // jQuery events for Ken
@@ -63,6 +72,16 @@ $(document).ready(function() {
   .mouseup(function() {
     // events when release mouse - Ken
     $('.ken-throwing').hide();
+    $('.ken-ready').show();
+  });
+  $(document).keydown(function(event) {
+    if(event.keyCode == 77) {
+      $('.ken-ready').hide();
+      $('.ken-cool').show();
+    }
+  });
+  $(document).keyup(function(){
+    $('.ken-cool').hide();
     $('.ken-ready').show();
   });
 

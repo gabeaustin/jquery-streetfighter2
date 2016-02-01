@@ -13,6 +13,19 @@ body {
   z-index: 1;
 }
 
+.instructions {
+  color: #fff;
+  top: -30px;
+  padding: 15px;
+  position: relative;
+  z-index: -1;
+  border: 1px red solid;
+}
+
+.instructions h2 {
+  text-align: center;
+}
+
 .ryu {
   float: left;
   width: 659px;
@@ -46,6 +59,12 @@ body {
   display: none;
 }
 
+.ryu-cool {
+  width: 659px;
+  height: 494px;
+  display: none;
+}
+
 .ken-still {
   width: 559px;
   height: 494px;
@@ -71,8 +90,16 @@ body {
   margin-top: -75px;
 }
 
+.ken-cool {
+  width: 559px;
+  height: 894px;
+  background: no-repeat;
+  display: none;
+}
+
 .ryu-hadouken, .ken-hadouken,
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing
+.ryu-cool, .ken-cool {
   background-repeat: no-repeat;
 }
 
@@ -118,6 +145,10 @@ body {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
+.ryu-cool {
+  background-image: url('../images/ryu-cool.gif');
+}
+
 .ken-ready {
   background-image: url('../images/ken-ready-position.gif');
   -moz-transform: scaleX(-1);
@@ -140,6 +171,16 @@ body {
 
 .ken-throwing {
   background-image: url('../images/ken-throwing.png');
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.ken-cool {
+  background-image: url('../images/ken-cool.png');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
