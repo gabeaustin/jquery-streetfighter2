@@ -103,7 +103,9 @@ body {
 
 .ken-cool {
   width: 559px;
-  height: 894px;
+  height: 640px;
+  margin: -65px;
+  zoom: 75%;
   background: no-repeat;
   display: none;
 }
